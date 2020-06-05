@@ -1,0 +1,11 @@
+{
+  "name": "pybatis-ng-mysql",
+  "version": "1.0.0",
+  "description": "## Before you begin",
+  "main": "index.js",
+  "scripts": {
+    "cloud-proxy": "cloud_sql_proxy -instances=dev-bbva-pybatis-ng-test:europe-west1:pybatis-ng-mysql=tcp:3307 -credential_file=/Users/albertoeyo/google/credentials/dev-bbva-pybatis-ng-test/dev-bbva-pybatis-ng-test-11458e6318c7.json"
+  },
+  "author": "Alberto Eyo",
+  "license": "ISC"
+}
