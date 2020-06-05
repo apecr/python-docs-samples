@@ -18,6 +18,3 @@ runtime: python37
 # something like https://cloud.google.com/kms/ to help keep secrets secret.
 env_variables:
   CLOUD_SQL_CONNECTION_NAME: dev-bbva-pybatis-ng-test:europe-west1:pybatis-ng-postgres
-  DB_USER: postgres
-  DB_PASS: postgres
-  DB_NAME: main_db

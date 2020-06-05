@@ -33,6 +33,7 @@ cloud_sql_connection_name = os.environ.get("CLOUD_SQL_CONNECTION_NAME")
 app = Flask(__name__)
 
 logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
 
 
 def init_connection_engine():
@@ -105,6 +106,10 @@ def init_unix_connection_engine(db_config):
         socket_path = os.environ.get("DB_SOCKET_PATH")
     else:
         socket_path = "/cloudsql"
+
+    logging.info("Connection Params")
+    logging.info(f"User: {db_user}")
+    logging.info(f"DB Name: {db_name}")
 
     return sqlalchemy.create_engine(
         # Equivalent URL:
@@ -181,6 +186,7 @@ def index():
 @app.route('/', methods=['POST'])
 def save_vote():
     # Get the team and time the vote was cast.
+    logging.info('Saving a vote')
     team = request.form['team']
     time_cast = datetime.datetime.utcnow()
     # Verify that the team is one of the allowed options
