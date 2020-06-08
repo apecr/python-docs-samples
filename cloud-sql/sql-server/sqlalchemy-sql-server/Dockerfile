@@ -25,6 +25,11 @@ RUN (curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -) && 
         echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile && \
         echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 
+# In the app logs in GAE, we are getting:
+# File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 490, in connect
+# return self.dbapi.connect(*cargs, **cparams) pyodbc.InterfaceError:
+# ('IM002', '[IM002] [unixODBC][Driver Manager]Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+
 # Copy application dependency manifests to the container image.
 # Copying this separately prevents re-running pip install on every code change.
 COPY requirements.txt ./
