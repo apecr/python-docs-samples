@@ -1,0 +1,12 @@
+{
+  "name": "sqlalchemy-sql-server",
+  "version": "1.0.0",
+  "description": "## Before you begin",
+  "main": "index.js",
+  "scripts": {
+    "cloud-proxy": "cloud_sql_proxy -instances=dev-bbva-pybatis-ng-test:europe-west1:pybatis-ng-sql-server=tcp:1433 sqlserver -u sqlserver --host 127.0.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
