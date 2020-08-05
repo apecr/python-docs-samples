@@ -4,8 +4,9 @@
   "description": "## Before you begin",
   "main": "index.js",
   "scripts": {
-    "cloud-proxy": "cloud_sql_proxy -instances=dev-bbva-pybatis-ng-test:europe-west1:pybatis-ng-postgres=tcp:5433 -credential_file=/Users/albertoeyo/google/credentials/dev-bbva-pybatis-ng-test/dev-bbva-pybatis-ng-test-11458e6318c7.json",
-    "db-connect": "psql \"sslmode=verify-ca sslrootcert=~/google/credentials/dev-bbva-pybatis-ng-test/pybatis-ng-postgres/server-ca.pem sslcert=~/google/credentials/dev-bbva-pybatis-ng-test/pybatis-ng-postgres/client-cert.pem sslkey=~/google/credentials/dev-bbva-pybatis-ng-test/pybatis-ng-postgres/client-key.pem hostaddr=34.77.65.5 user=postgres dbname=postgres\""
+    "cloud-proxy": "cloud_sql_proxy -instances=dev-bbva-pybatis-ng-test:europe-west1:pybatis-ng-postgres-test=tcp:5433 -credential_file=/Users/albertoeyo/google/credentials/pybatis/dev-bbva-pybatis-ng-test/dev-bbva-pybatis-ng-test-11458e6318c7.json",
+    "db-connect": "psql \"sslmode=verify-ca sslrootcert=~/google/credentials/pybatis/dev-bbva-pybatis-ng-test/pybatis-ng-postgres/server-ca.pem sslcert=~/google/credentials/pybatis/dev-bbva-pybatis-ng-test/pybatis-ng-postgres/client-cert.pem sslkey=~/google/credentials/pybatis/dev-bbva-pybatis-ng-test/pybatis-ng-postgres/client-key.pem hostaddr=34.77.65.5 user=postgres dbname=postgres\"",
+    "start": "python main.py"
   },
   "keywords": [],
   "author": "",
